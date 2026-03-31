@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>盘古算力 - 专业AI算力服务商</title>
+<meta name="description" content="盘古算力，专业AI算力服务商，RTX4090/A100/H100低至2.5元/小时，注册30分钟极速开通。">
+<meta name="keywords" content="GPU租用,AI算力,深度学习,显卡租赁,RTX4090,A100,H100">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#0a0a1a 0%,#1a1a3e 50%,#0d0d2b 100%);color:#e0e0e0;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:0;width:100%;background:rgba(10,10,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(99,102,241,0.2);z-index:100;padding:15px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:bold;background:linear-gradient(135deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{color:#ccc;text-decoration:none;font-size:14px;transition:color .3s}
+.nav-links a:hover{color:#6366f1}
+.hero{padding:150px 0 100px;text-align:center}
+.hero h1{font-size:56px;font-weight:800;line-height:1.2;margin-bottom:20px}
+.hero h1 span{background:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;color:#999;max-width:600px;margin:0 auto 40px;line-height:1.6}
+.badge{display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;padding:8px 20px;border-radius:50px;font-size:14px;margin-bottom:30px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+.cta-buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 32px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;border:none;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(99,102,241,.4)}
+.btn-secondary{background:transparent;color:#6366f1;border:2px solid #6366f1}
+.btn-secondary:hover{background:rgba(99,102,241,.1)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:80px 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.stat{text-align:center}
+.stat .number{font-size:42px;font-weight:800;background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat .label{color:#666;margin-top:8px;font-size:14px}
+.section{padding:100px 0}
+.section-title{text-align:center;font-size:36px;font-weight:700;margin-bottom:15px}
+.section-subtitle{text-align:center;color:#666;margin-bottom:60px;font-size:16px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.feature{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:40px;transition:all .3s}
+.feature:hover{transform:translateY(-5px);border-color:rgba(99,102,241,.3);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.feature .icon{font-size:36px;margin-bottom:20px}
+.feature h3{font-size:20px;margin-bottom:12px;color:white}
+.feature p{color:#888;line-height:1.7;font-size:14px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.price-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:40px;transition:all .3s;position:relative}
+.price-card.featured{border-color:rgba(99,102,241,.5);background:rgba(99,102,241,.05)}
+.price-card.featured::before{content:"最热门";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#6366f1,#a855f7);color:white;padding:4px 16px;border-radius:50px;font-size:12px}
+.price-card h3{font-size:22px;margin-bottom:10px;color:white}
+.price-card .price{font-size:48px;font-weight:800;color:#6366f1;margin:20px 0}
+.price-card .price span{font-size:16px;color:#666}
+.price-card .price em{font-style:normal;font-size:18px}
+.price-card ul{list-style:none;margin:30px 0}
+.price-card li{padding:10px 0;color:#999;font-size:14px;border-bottom:1px solid rgba(255,255,255,.03)}
+.price-card li::before{content:"✓ ";color:#6366f1}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.step{text-align:center;padding:30px}
+.step .step-num{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;margin:0 auto 20px;color:white}
+.step h4{color:white;margin-bottom:10px}
+.step p{color:#888;font-size:14px}
+.faq{max-width:800px;margin:0 auto}
+.faq-item{border:1px solid rgba(255,255,255,.06);border-radius:12px;margin-bottom:15px;overflow:hidden}
+.faq-item summary{padding:20px;cursor:pointer;color:white;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::after{content:"+";color:#6366f1;font-size:20px}
+.faq-item p{padding:0 20px 20px;color:#888;line-height:1.7;font-size:14px}
+footer{text-align:center;padding:60px 0;border-top:1px solid rgba(255,255,255,.05);color:#666;font-size:14px}
+.contact-bar{background:linear-gradient(135deg,#6366f1,#8b5cf6);padding:80px 0;text-align:center;border-radius:20px;margin:0 20px}
+.contact-bar h2{font-size:32px;color:white;margin-bottom:10px}
+.contact-bar p{color:rgba(255,255,255,.8);margin-bottom:30px}
+@media(max-width:768px){
+.hero h1{font-size:32px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.features,.pricing,.steps{grid-template-columns:1fr}
+.nav-links{display:none}
+.contact-bar{margin:0 10px;border-radius:12px}
+.price-card .price{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">⚡ 盘古算力</div>
+<ul class="nav-links">
+<li><a href="#features">产品优势</a></li>
+<li><a href="#pricing">产品定价</a></li>
+<li><a href="#steps">快速开始</a></li>
+<li><a href="#faq">常见问题</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="badge">🔥 新用户注册享8折优惠</div>
+<h1>专业<span>AI算力</span>服务商</h1>
+<p>为AI创业者、高校研究者、独立开发者提供极致性价比的GPU算力资源，低至<span style="color:#6366f1;font-weight:700"> ¥1.36/小时</span></p>
+<div class="cta-buttons">
+<a href="#pricing" class="btn btn-primary">立即查看价格 →</a>
+<a href="#contact" class="btn btn-secondary">联系我们</a>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px">
+<div class="stat"><div class="number">99.9%</div><div class="label">服务可用性</div></div>
+<div class="stat"><div class="number">30min</div><div class="label">极速开通</div></div>
+<div class="stat"><div class="number">24/7</div><div class="label">技术支持</div></div>
+<div class="stat"><div class="number">30%+</div><div class="label">低于同行价格</div></div>
+</div>
+</section>
+
+<section class="section" id="features">
+<div class="container">
+<div class="section-title">为什么选择盘古算力？</div>
+<div class="section-subtitle">专业、稳定、高性价比的一站式GPU算力平台</div>
+<div class="features">
+<div class="feature">
+<div class="icon">🚀</div>
+<h3>极速开通</h3>
+<p>注册30分钟即可完成实名认证并开通实例，告别漫长等待</p>
+</div>
+<div class="feature">
+<div class="icon">💰</div>
+<h3>价格透明</h3>
+<p>按需计费，随时开关，无隐藏费用，用多少付多少</p>
+</div>
+<div class="feature">
+<div class="icon">🖥️</div>
+<h3>丰富选择</h3>
+<p>RTX 4090 / A100 / H100 多款GPU灵活切换</p>
+</div>
+<div class="feature">
+<div class="icon">🛡️</div>
+<h3>专业支持</h3>
+<p>配备AI选型顾问，小白也能快速上手</p>
+</div>
+<div class="feature">
+<div class="icon">🔒</div>
+<h3>数据安全</h3>
+<p>独享实例隔离，数据加密存储，企业级安全保障</p>
+</div>
+<div class="feature">
+<div class="icon">📐</div>
+<h3>弹性扩展</h3>
+<p>单卡到集群，按需弹性扩缩，完美匹配业务需求</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="pricing" style="background:rgba(0,0,0,.2)">
+<div class="container">
+<div class="section-title">产品定价</div>
+<div class="section-subtitle">灵活定价，满足不同规模需求</div>
+<div class="pricing">
+<div class="price-card">
+<h3>⚡ 入门版</h3>
+<div class="price">¥2.5<em>/小时</em></div>
+<p style="color:#888;font-size:14px">RTX 4090 × 1卡 | 24GB显存</p>
+<ul>
+<li>适合模型微调、对话推理</li>
+<li>预装主流AI框架</li>
+<li>SSD高速存储</li>
+<li>7×24小时监控</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="width:100%;text-align:center">立即咨询</a>
+</div>
+<div class="price-card featured">
+<h3>🔥 进阶版</h3>
+<div class="price">¥4.0<em>/小时</em></div>
+<p style="color:#888;font-size:14px">RTX 4090 × 2卡 | 48GB显存</p>
+<ul>
+<li>适合中型训练、AI应用开发</li>
+<li>多卡互联高速通信</li>
+<li>更大存储空间</li>
+<li>优先技术支持</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="width:100%;text-align:center">立即咨询</a>
+</div>
+<div class="price-card">
+<h3>🏢 企业版</h3>
+<div class="price">定制<em>方案</em></div>
+<p style="color:#888;font-size:14px">A100/H100 多卡集群</p>
+<ul>
+<li>适合大型模型训练</li>
+<li>独享网络带宽</li>
+<li>专属客户经理</li>
+<li>SLA保障协议</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="width:100%;text-align:center">联系我们</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="steps">
+<div class="container">
+<div class="section-title">三步快速开始</div>
+<div class="section-subtitle">从注册到使用，最快30分钟搞定</div>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h4>注册账号</h4>
+<p>手机号注册并完成实名认证</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h4>选择产品</h4>
+<p>根据需求选择合适的GPU方案</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h4>立即开通</h4>
+<p>在线支付，30分钟内交付使用</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:rgba(0,0,0,.2)">
+<div class="container">
+<div class="section-title">常见问题</div>
+<div class="faq">
+<details class="faq-item">
+<summary>支持哪些付款方式？</summary>
+<p>支持微信、支付宝、对公转账，可签合同开发票。</p>
+</details>
+<details class="faq-item">
+<summary>租用后多久可以开始使用？</summary>
+<p>付款后30分钟内交付实例，最迟不超过2小时。</p>
+</details>
+<details class="faq-item">
+<summary>遇到技术问题怎么办？</summary>
+<p>提供专属技术客服群，30秒内响应，7×24小时在线支持。</p>
+</details>
+<details class="faq-item">
+<summary>数据安全有保障吗？</summary>
+<p>每个实例完全隔离，到期自动清除数据。企业用户可签署保密协议。</p>
+</details>
+<details class="faq-item">
+<summary>可以按月租用吗？</summary>
+<p>支持按小时、按天、按月灵活计费，长期租用享受更多折扣。</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="contact-bar">
+<h2>准备好开启AI之旅了吗？</h2>
+<p>添加微信客服，获取专属方案与优惠</p>
+<div class="cta-buttons" style="justify-content:center">
+<a href="#" class="btn" style="background:white;color:#6366f1;font-weight:700">📱 扫码添加微信客服</a>
+<a href="tel:18664442111" class="btn" style="background:transparent;color:white;border:2px solid rgba(255,255,255,.3)">📞 186-6444-2111</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 盘古算力 PanguGPU — 专业AI算力服务商</p>
+<p style="margin-top:10px;color:#555">盘古集团旗下品牌 | 基础资源由极智算提供 | 平台稳定可靠</p>
+</div>
+</footer>
+
+</body>
+</html>
